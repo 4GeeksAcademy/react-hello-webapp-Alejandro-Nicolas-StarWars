@@ -21,7 +21,7 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'cheap-module-source-map',
     devServer: {
-        port,
+        port: 3000,
         hot: true,
         allowedHosts: "all",
         historyApiFallback: true,
@@ -29,7 +29,7 @@ module.exports = merge(common, {
           directory: path.resolve(__dirname, "dist"),
         },
         client: {
-          webSocketURL: publicUrl
+          webSocketURL: 'ws://localhost:3000/ws',
         },
     },
     plugins: []
